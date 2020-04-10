@@ -1,0 +1,416 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black ;
+    font-family: 'roboto_condensedregular', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+    color: black;
+}
+
+header{
+    height: 100vh;
+    text-align: center;
+    font-size: 18px;
+    background-image: url("/images/chair.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#header-words{
+    /* adjust with media queries */
+    padding-top: 23vh;
+    font-size: 6em;
+    color: white;
+}
+#arrow {
+    padding-top: 10vh;
+    font-size: 0.5em;
+    transition: color ease-in-out 0.3s;
+}
+#arrow.scroll{
+    color: rgba(204, 0, 0, 0);
+}
+
+#navbar-div {
+    z-index: 100;
+    list-style-type: none;
+    margin: 0;
+    padding: 1.4rem 0 0 1.6rem;
+    transition: background-color 0.3s ease-out;
+    text-transform: uppercase;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.links{
+    padding-top: 0.7rem;
+    padding-right: 1.6rem;
+    float: right;
+}
+
+
+.links.home{
+    display: none;
+    padding-top: 0.7rem;
+    float: right;
+}
+
+.logo{
+    font-size: 2em;
+    float:left;
+}
+#navbar-div.scroll{
+    background-color: rgb(179, 176, 176);
+    box-shadow: black 0 0 10px;
+}
+
+#navbar-div.scroll li a:hover {
+    color: white;
+    background-color: #747474;
+}
+.dropbtn {
+    color: white;
+    border: none;
+  }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+  }
+  
+.dropdown-content a:hover {
+    background-color: #747474;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+section {
+    background-color: rgb(235,235,235);
+    display: flex;
+    margin: 0 0 0 0;
+    text-align: center;
+}
+.below {
+    display: flex;
+    flex-direction: column;
+}
+
+.third{
+    font-size: 18px;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+}
+
+.large-three{
+    margin-left: 7.5vw;
+    height: 50vh;
+    margin-top: 11vh;
+    margin-bottom: 11vh;
+}
+
+.title{
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+}
+
+.layer.three{
+    max-width: 500px;
+    color: black;
+    text-align: left;
+    margin: 6.5vh 10vh 6.5vh 10vh;
+}
+
+.third.p{
+    text-align: left;
+    padding-top: 3vh;
+    padding-bottom: 0;
+}
+
+.third.p div{
+    padding-bottom: 3vh;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+label {
+    padding: 0 10px 0 0;
+}
+  
+  /* Set a style for all buttons */
+button {
+    background-color: rgba(199, 174, 104);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+  
+button:hover {
+    opacity: 0.8;   
+}
+
+/* Center the image and position the close button */
+
+.container {
+    padding: 16px;
+}
+
+h2{
+    margin: 0
+}
+
+
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: rgb(210, 210, 210);
+    margin: 0;
+    border: 10px solid rgb(194, 194, 194);
+    width: 100%;
+}
+
+/* Add Zoom Animation */
+.animate {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+
+footer{
+    padding-top: 10vh;
+    height: 50vh;
+    text-align: center;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    padding: 1em;
+    font-size: 15px;
+}
+
+.footer-links{
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    padding-top: 15vh;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+
+.footer-links div{
+    padding-right: 10vw;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color:  white;
+    transition: ease-in-out 0.1s;
+}
+
+.footer-links a:hover{
+    color: rgb(199, 174, 104);
+
+}
+
+
+.footer.social-logos {
+    text-align: center;
+}
+
+.social-image2 {
+    background-color: white;
+    padding-left: 0;
+    margin: 0 2vw 0 0;
+    width:5vh;
+    display: inline-block;
+    border-radius: 3.1vh;
+    border: 5px solid white;
+    transition: ease-in-out 0.1s;
+}
+
+.footer.social-logos img{
+    width: 5vh;
+    height: 5vh;
+}
+
+.social-image2:hover{
+    border-color: rgb(199, 174, 104);
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+  @media screen and (max-width: 800px){
+    body{
+        background-color: black ;
+        font-family: 'roboto_condensedregular', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0px;
+        padding: 0px;
+        font-size: 12px;
+    }
+    
+    header{
+        height: 100vh;
+        text-align: center;
+        font-size: 12px;
+        background-image: url("/images/chair2.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #header-words{
+        /* adjust with media queries */
+        padding-top: 23vh;
+        font-size: 3em;
+        color: white;
+    }
+    #arrow {
+        padding-top: 20vh;
+        font-size: 1em;
+        transition: color ease-in-out 0.3s;
+    }
+    #arrow.scroll{
+        color: rgba(204, 0, 0, 0);
+    }
+    
+    #navbar-div {
+        z-index: 100;
+        list-style-type: none;
+        /* Make margin more inside for both the logo and the links */
+        margin: 0;
+        /* padding: 1.4rem 0 0 1.6rem; */
+        transition: background-color 0.3s ease-out;
+        text-transform: uppercase;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .links{
+        width: 50%;
+        padding-top: 0.7rem;
+        float: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .links.home{
+        padding-top: 0.7rem;
+        float: none;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .logo{
+        display: none;
+        float: none;
+    }
+    section {
+        display: block;
+    }
+    .below {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .third{
+        font-size: 1em;
+        padding-top: 12vh;
+        padding-bottom: 12vh;
+    }
+    
+    .large-three{
+        margin-left: 0;
+        height: 52vw;
+        width: 78vw;
+        margin-top: 0;
+        margin-bottom: 0vh;
+    }
+    
+    .title{
+        font-size: 2em;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-align: left;
+    }
+    
+    .layer.three{
+        max-width: 80%;
+        text-align: center;
+        margin: 4vh 10vw 4vh 10vw;
+    }
+    
+    .third.p{
+        text-align: center;
+        padding-top: 3vh;
+        padding-bottom: 0;
+    }
+    
+    .third.p div{
+        padding-bottom: 3vh;
+    }
+
+    .title{
+        text-align: center;
+    }
+    .center{
+        width: 92%;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .footer-links{
+        font-size: 12px;
+        align-items: center;
+        display: flex;
+        padding-top: 12.5vh;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5vh;
+    }
+  }

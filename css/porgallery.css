@@ -1,0 +1,340 @@
+#index-gallery{
+    display: grid;
+    /* align-items: center; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1vw;
+    grid-template-areas:
+    "img1 img2 img2 img3"
+    "img1 img4 img5 img5"
+    "img6 img6 img7 img8"
+    "img9 img10 img7 img11"
+    "img12 img13 img13 img11"
+    "img14 img14 img15 img16"
+}
+
+#index-gallery .gallery-img{
+    width: 20vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Images! */
+
+#index-gallery .img1 {
+    grid-area: img1;
+    background-image: url("/images/pors1.jpg");
+    height: 41vw;
+}
+
+#index-gallery .img2 {
+    grid-area: img2;
+    background-image: url("/images/pors2.jpg");
+    width: 41vw;
+}
+
+#index-gallery .img3 {
+    grid-area: img3;
+    background-image: url("/images/pors3.jpg");
+}
+
+#index-gallery .img4 {
+    grid-area: img4;
+    background-image: url("/images/pors4.jpg");
+}
+
+#index-gallery .img5 {
+    grid-area: img5;
+    background-image: url("/images/pors5.jpg");
+    width: 41vw;
+}
+
+#index-gallery .img6 {
+    grid-area: img6;
+    background-image: url("/images/pors6.jpg");
+    width: 41vw;
+}
+
+#index-gallery .img7 {
+    grid-area: img7;
+    background-image: url("/images/pors7.jpg");
+    height: 41vw;
+}
+
+#index-gallery .img8 {
+    grid-area: img8;
+    background-image: url("/images/pors8.jpg");
+}
+
+#index-gallery .img9 {
+    grid-area: img9;
+    background-image: url("/images/pors9.jpg");
+}
+
+#index-gallery .img10 {
+    grid-area: img10;
+    background-image: url("/images/pors10.jpg");
+}
+
+#index-gallery .img11 {
+    grid-area: img11;
+    background-image: url("/images/pors11.jpg");
+    height: 41vw;
+}
+
+#index-gallery .img12 {
+    grid-area: img12;
+    background-image: url("/images/pors12.jpg");
+}
+
+#index-gallery .img13 {
+    grid-area: img13;
+    background-image: url("/images/pors13.jpg");
+    width: 41vw;
+}
+
+#index-gallery .img14 {
+    grid-area: img14;
+    background-image: url("/images/pors14.jpg");
+    width: 41vw;
+}
+
+#index-gallery .img15 {
+    grid-area: img15;
+    background-image: url("/images/pors15.jpg");
+}
+
+#index-gallery .img16 {
+    grid-area: img16;
+    background-image: url("/images/pors16.jpg");
+}
+
+.gallery-img div{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gallery-img a{
+    font-family: 'roboto_condensedregular', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.gallery-img div:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+}
+.gallery-img:hover{
+    transform: scale(1.01);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Popup Window when clicked */
+
+.img-window{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+img.window img{
+    max-height: 60vh;
+    max-width: 50vw;
+}
+
+/* Buttons! */
+.img-btn-prev {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: rgb(10,10,10);
+    position: fixed;
+    top: 48vh;
+    z-index: 500;
+    font-family: 'roboto_condensedregular', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.img-btn-prev:hover{
+    opacity: 0.8;
+}
+
+.img-btn-next{
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: rgb(10,10,10);
+    position: fixed;
+    top: 48vh;
+    z-index: 500;
+    font-family: 'roboto_condensedregular', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.img-btn-next:hover{
+    opacity: 0.8;
+}
+
+#img-title{
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    position: fixed;
+    top: 90vh;
+    z-index: 500;
+    font-family: 'roboto_condensedregular', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+@media screen and (Max-width: 800px){
+    #index-gallery{
+        display: grid;
+        /* align-items: center; */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1vw;
+        grid-template-areas:
+        "img2 img2"
+        "img1 img3"
+        "img1 img4"
+        "img5 img5"
+        "img6 img6"
+        "img8 img7"
+        "img9 img7"
+        "img11 img10"
+        "img11 img12"
+        "img13 img13"
+        "img15 img16"
+        "img14 img14"
+    }
+    
+    #index-gallery .gallery-img{
+        width: 41vw;
+        height: 40vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+    /* Images! */
+    
+    #index-gallery .img1 {
+        grid-area: img1;
+        background-image: url("/images/pors1.jpg");
+        height: 81vw;
+    }
+    
+    #index-gallery .img2 {
+        grid-area: img2;
+        background-image: url("/images/pors2.jpg");
+        width: 83.5vw;
+    }
+    
+    #index-gallery .img3 {
+        grid-area: img3;
+        background-image: url("/images/pors3.jpg");
+    }
+    
+    #index-gallery .img4 {
+        grid-area: img4;
+        background-image: url("/images/pors4.jpg");
+    }
+    
+    #index-gallery .img5 {
+        grid-area: img5;
+        background-image: url("/images/pors5.jpg");
+        width: 83.5vw;
+    }
+    
+    #index-gallery .img6 {
+        grid-area: img6;
+        background-image: url("/images/pors6.jpg");
+        width: 83.5vw;
+    }
+    
+    #index-gallery .img7 {
+        grid-area: img7;
+        background-image: url("/images/pors7.jpg");
+        height: 81vw;
+    }
+    
+    #index-gallery .img8 {
+        grid-area: img8;
+        background-image: url("/images/pors8.jpg");
+    }
+    
+    #index-gallery .img9 {
+        grid-area: img9;
+        background-image: url("/images/pors9.jpg");
+    }
+    
+    #index-gallery .img10 {
+        grid-area: img10;
+        background-image: url("/images/pors10.jpg");
+    }
+    
+    #index-gallery .img11 {
+        grid-area: img11;
+        background-image: url("/images/pors11.jpg");
+        height: 81vw;
+    }
+    
+    #index-gallery .img12 {
+        grid-area: img12;
+        background-image: url("/images/pors12.jpg");
+    }
+    
+    #index-gallery .img13 {
+        grid-area: img13;
+        background-image: url("/images/pors13.jpg");
+        width: 83.5vw;
+    }
+    
+    #index-gallery .img14 {
+        grid-area: img14;
+        background-image: url("/images/pors14.jpg");
+        width: 83.5vw;
+    }
+    
+    #index-gallery .img15 {
+        grid-area: img15;
+        background-image: url("/images/pors15.jpg");
+    }
+    
+    #index-gallery .img16 {
+        grid-area: img16;
+        background-image: url("/images/pors16.jpg");
+    }
+    ul{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
